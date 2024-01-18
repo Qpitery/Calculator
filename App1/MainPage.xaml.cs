@@ -14,7 +14,7 @@ namespace App1
             Mainlabel.Text = "0"; //Mainlabel.Text свойство
         }
 
-        private void Button_ClickedRAVNO(object sender, EventArgs e) //метод
+        private void Button_ClickedRAVNO(object sender, EventArgs e //Этот параметр обычно представляет объект, который инициировал событие.) //метод
         {
 
             //switch (count): Это конструкция выбора, которая оценивает значение переменной count и выполняет соответствующий блок кода.
