@@ -1,26 +1,23 @@
-﻿using System; //пространство имен
+﻿using System; 
 using Xamarin.Forms;
 namespace App1
 
 {
-    public partial class MainPage : ContentPage //объявление класса 
+    public partial class MainPage : ContentPage 
     {
-        private double a, b; //переменные с плавающей запятой
-        private int count; //поле
+        private double a, b; 
+        private int count; 
 
-        public MainPage() //конструктор класса
+        public MainPage() 
         {
             InitializeComponent();
-            Mainlabel.Text = "0"; //Mainlabel.Text свойство
+            Mainlabel.Text = "0"; 
         }
 
-        private void Button_ClickedRAVNO(object sender, EventArgs e //Этот параметр обычно представляет объект, который инициировал событие.) //метод
+        private void Button_ClickedRAVNO(object sender, EventArgs e 
         {
 
-            //switch (count): Это конструкция выбора, которая оценивает значение переменной count и выполняет соответствующий блок кода.
-            //В данном случае, count содержит информацию о том, какую арифметическую операцию следует выполнить.
-
-            switch (count)  //конструкция 
+            switch (count)  
             {
                     case 1:
                         b = a + double.Parse(Mainlabel.Text); 
@@ -36,10 +33,7 @@ namespace App1
                         break ; 
 
                 }
-                Mainlabel.Text = b.ToString();// Mainlabel.Text = b.ToString();: После выполнения выбранной арифметической операции результат сохраняется в переменной b.
-                                              // Затем это значение преобразуется в строку и устанавливается в качестве текста элемента интерфейса Mainlabel.
-                                              // Таким образом, пользователь видит результат операции на экране калькулятора.
-
+                Mainlabel.Text = b.ToString();
 
         }
 
@@ -111,10 +105,10 @@ namespace App1
         {
             if (Mainlabel.Text.Length == 0 || Mainlabel.Text.EndsWith(".") || Mainlabel.Text.EndsWith("/") || Mainlabel.Text.EndsWith("x") || Mainlabel.Text.EndsWith("+") || Mainlabel.Text.EndsWith("-"))
             {
-                return; //проверка состояния Mainlabel
+                return; 
             }
             a = double.Parse(Mainlabel.Text);
-            count = 1; //номер операции
+            count = 1;
             Storylabel.Text = Mainlabel.Text + "+";
             Mainlabel.Text = "0";
         }
